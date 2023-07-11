@@ -1,15 +1,24 @@
-Source: template-repository
-Section: unknown
+Source: python-meld3
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Jackson Doak <noskcaj@ubuntu.com>
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-setuptools
+Standards-Version: 3.9.6
+Homepage: https://pypi.python.org/pypi/meld3
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-meld3.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-meld3
 
-Package: template-repository
+Package: python3-meld3
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: ${python3:Depends}, ${misc:Depends}
+Description: HTML/XML templating system for Python (Python 3)
+ meld3 is an HTML/XML templating system for Python 2.3+ which keeps
+ template markup and dynamic rendering logic separate from one
+ another. meld3 can deal with HTML or XML/XHTML input and can output
+ well-formed HTML or XML/XHTML.
+ .
+ This package installs the library for Python 3.
