@@ -1,5 +1,143 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-meld3 (1.0.2-4) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Bump debhelper from old 9 to 12.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Name,
+    Repository, Repository-Browse.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 12 to 13.
+
+ -- Sandro Tosi <morph@debian.org>  Fri, 03 Jun 2022 15:24:13 -0400
+
+python-meld3 (1.0.2-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/control: Deprecating priority extra as per policy 4.0.1
+  * d/watch: Use https protocol
+  * d/changelog: Remove trailing whitespaces
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Andrey Rahmatullin ]
+  * Drop Python 2 support (Closes: #937913).
+
+ -- Andrey Rahmatullin <wrar@debian.org>  Thu, 05 Sep 2019 22:24:12 +0500
+
+python-meld3 (1.0.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Switch binaries from arch any to arch all since there is no longer any
+    arch specific content
+  * Swith python* interpreter build-deps to -all instead of -all-dev
+  * Remove unneeded shlibs:Depends
+  * Drop obsolete Provides
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 21 Sep 2015 07:35:46 -0400
+
+python-meld3 (1.0.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Build Python 3 package (Closes: #782946).
+  * Build using pybuild.
+  * Use pypi.debian.net redirector in debian/watch.
+  * Bump Standards-Version to 3.9.6, no changes.
+
+ -- Andrew Starr-Bochicchio <asb@debian.org>  Sat, 23 May 2015 19:30:30 -0400
+
+python-meld3 (1.0.0-1) unstable; urgency=low
+
+  * New upstream release
+    - Drops the .so file, so don't install it
+  * Delete example file, they have been removed
+  * Add package to debian python module team
+  * debian/control:
+    - Set DPMT as maintainer, myself as uploader
+    - Use DPMT vcs fields
+    - Bump standards-version to 3.9.5
+  * Switch to dh
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Tue, 27 May 2014 06:33:39 +1000
+
+python-meld3 (0.6.10-1) unstable; urgency=low
+
+  * New maintainer. closes: #717061
+  * New upstream version. closes: #651174
+  * Disabled fixtag_import_error_with_python2.7.patch, fixed in upstream
+  * debian/control
+    - Changed homepage to current one
+    - Changed maintainer
+    - Updated to Standards-version 3.9.4
+    - Added ${misc:Depends} as Depends
+    - Removed build-depends for python-support
+    - Removed "An" from short description
+    - Changed debhelper version from 7 to 9
+  * debian/rules
+    - Removed python-support references
+  * Created debian/watch
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Thu, 01 Aug 2013 18:59:45 +1000
+
+python-meld3 (0.6.5-3.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Apply Ubuntu patch to make the package compatible with Python
+    2.7. Thanks to Jessica McKellar. Closes: #644246.
+    + Switch to 3.0 (quilt) source format to apply patch cleanly.
+
+ -- Arnaud Fontaine <arnau@debian.org>  Mon, 31 Oct 2011 10:48:32 +0900
+
+python-meld3 (0.6.5-3) unstable; urgency=low
+
+  * Bring maintainer source in sync with NMUs
+
+ -- Anders Hammarquist <iko@debian.org>  Tue, 26 Jan 2010 12:56:08 +0100
+
+python-meld3 (0.6.5-2.3) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Drop dependency on python-elementtree, scheduled for removal soon,
+    together with Python 2.4 (Closes: #562463).
+  * Bump XS-Python-Version to >= 2.5, elementtree is part of python2.5.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Tue, 05 Jan 2010 23:11:37 +0100
+
+python-meld3 (0.6.5-2.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Build-Depend on python >= 2.5.4 for --install-layout=deb.
+
+ -- Kumar Appaiah <akumar@debian.org>  Mon, 19 Oct 2009 17:47:47 -0500
+
+python-meld3 (0.6.5-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix "manipulates site-packages/ directly, failing with Python 2.6"
+    Applied and uploaded Kumar's patch, Thanks dude! (Closes: #547846)
+
+ -- Bastian Venthur <venthur@debian.org>  Sat, 17 Oct 2009 15:17:40 +0200
+
+python-meld3 (0.6.5-2) unstable; urgency=low
+
+  * Fix build-depends (Closes: #543476)
+
+ -- Anders Hammarquist <iko@debian.org>  Wed, 09 Sep 2009 22:54:12 +0200
+
+python-meld3 (0.6.5-1) unstable; urgency=low
+
+  * Initial release (Closes: #491667)
+
+ -- Anders Hammarquist <iko@debian.org>  Thu, 30 Jul 2009 11:04:50 +0200
